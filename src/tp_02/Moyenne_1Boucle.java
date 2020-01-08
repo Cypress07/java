@@ -30,8 +30,7 @@ public class Moyenne_1Boucle {
     Notes [i] = reader.nextInt();
    somme = somme + Notes [i];
     }
-      
-
+     
     moyenne = (double)somme / N;
     
     System.out.println("La moyenne vaut : " + moyenne);
