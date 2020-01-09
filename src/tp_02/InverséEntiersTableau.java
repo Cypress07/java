@@ -23,13 +23,18 @@ public class InverséEntiersTableau {
     final int n=10;
     int [] tab ;
     tab = new int [n] ;
-    int i;
+    int i, tmp;
  
     for (i=0 ; i<n ; i++) {
-    System.out.print("Entrez une valeur :")   ;
+    System.out.print("Entrez une valeur :");
     tab [i] = reader.nextInt(); 
     }
-      for (i = n-1 ; i >=0  ; i--){
+    for (i=0 ; i<n/2; i++){
+        tmp=tab[i];
+        tab[i]=tab[n-i-1];
+        tab[n-i-1]=tmp;
+    }
+        for (i =0 ; i<n ; i++){
  
       System.out.println (tab[i]);
 }
