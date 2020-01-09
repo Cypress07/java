@@ -36,7 +36,7 @@ public class InverséEntiersTableau {
     }
         for (i =0 ; i<n ; i++){
  
-      System.out.println (tab[i]);
+      System.out.print (tab[i] + " ");
 }
     }
     }
