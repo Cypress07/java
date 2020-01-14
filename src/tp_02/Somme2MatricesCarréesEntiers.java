@@ -34,7 +34,7 @@ public class Somme2MatricesCarréesEntiers {
     }
    for (i=0 ; i<n ; i++) {
          for (j=0 ; j<n ; j++) {
-    System.out.printf("Entrez matrice2[%d][%d] :",i,j);
+    System.out.printf("Entrez matrice2 [%d][%d] :",i,j);
     matrice2[i][j] = reader.nextInt(); 
     }
    }
