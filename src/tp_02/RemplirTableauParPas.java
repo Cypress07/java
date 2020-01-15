@@ -28,7 +28,7 @@ public class RemplirTableauParPas {
     System.out.print("Entrez une valeur de départ :");
     valDepart = reader.nextInt(); 
     
-    System.out.print("Entrzs un pas :");
+    System.out.print("Entrez un pas :");
     pas = reader.nextInt();
    
     val=valDepart;
