@@ -5,7 +5,6 @@
  */
 package tp_03;
 
-import java.io.PrintStream;
 import java.util.Scanner;
 
 /**
