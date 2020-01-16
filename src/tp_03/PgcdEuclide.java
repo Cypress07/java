@@ -23,7 +23,7 @@ public class PgcdEuclide {
     System.out.print ("Ecrivez un entier:");
     int b = reader.nextInt();
     
-    System.out.println("Le pgcd de " + a + " et " + b + " est " + pgcd (a));
+    System.out.println("Le pgcd est " + pgcd (a,b));
   }
     
     public static int pgcd (int a, int b) {
