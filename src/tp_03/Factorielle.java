@@ -24,7 +24,7 @@ public class Factorielle {
     System.out.print ("Entrez un entier :");
     n=reader.nextInt();
 
-    System.out.println ("Le factoriel de "+n+" est :" + factorielle (+n));
+    System.out.println ("La factorielle de "+n+" est :" + factorielle (+n));
     }
     
     public static int factorielle (int n) { 
