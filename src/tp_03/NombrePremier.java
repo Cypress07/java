@@ -67,7 +67,7 @@ public class NombrePremier {
 }
 public static void AfficheNP(int n2) {
     
-    System.out.println ("Liste des nombres de l'intervalle de [3, n]:");
+    System.out.println ("Liste des nombres premiers de l'intervalle de [3, n]:");
    
     for (int i=3; i<=n2; i++){
         if (Premier (i)){
@@ -79,7 +79,7 @@ System.out.println ("\nFin de la liste");
 
 public static void AfficheNPJ(int n3) {
    
-    System.out.println ("Liste des nombres de l'intervalle de [3, n]:");
+    System.out.println ("Liste des nombres premiers jumeaux de l'intervalle de [3, n]:");
     int ad, d=2 ;
         
     for (int i=3 ; i<=n3 ; i++) {       
@@ -87,7 +87,7 @@ public static void AfficheNPJ(int n3) {
         ad = d ;
         d=i;
         if (d==ad+2)     
-            System.out.printf ("Premiers jumeaux : %d %d\n", ad ,d );
+            System.out.printf ("les premiers jumeaux : %d %d\n", ad ,d );
     }
 }    
 }
