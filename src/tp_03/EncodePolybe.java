@@ -45,19 +45,6 @@ public class EncodePolybe {
             message=message.replace('è','e');
             message=message.replace('à','a');
             message=message.replace('ù','u');
-            message=message.replaceAll("0", "zeros ");
-            message=message.replaceAll("1", "un ");
-            message=message.replaceAll("2", "deux ");
-            message=message.replaceAll("3", "trois ");
-            message=message.replaceAll("4", "quatre ");
-            message=message.replaceAll("5", "cinq ");
-            message=message.replaceAll("6", "six ");
-            message=message.replaceAll("7", "sept ");
-            message=message.replaceAll("8", "huit ");
-            message=message.replaceAll("9", "neuf ");
-            message=message.replaceAll("@", "at");
-            message=message.replaceAll("&", "et");
-            message=message.replaceAll("%", "pourcent ");
              
             //cryptage du message :
             for (int i = 0; i<message.length(); i++)
