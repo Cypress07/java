@@ -40,6 +40,10 @@ public class NombrePremier {
     int n2=reader.nextInt ();
     AfficheNP (n2);
     
+    //TP08B Nombres Premiers Jumeaux
+    System.out.println ("Choix de la valeur de n:");
+    int n3=reader.nextInt ();
+    AfficheNPJ (n3);
     }
     
     public static boolean Premier(int n) { 
@@ -59,7 +63,7 @@ public class NombrePremier {
         div=div+2 ;
     }
     
-    return div*div >n;
+    return div*div >n ;
 }
 public static void AfficheNP(int n2) {
     
@@ -71,5 +75,20 @@ public static void AfficheNP(int n2) {
         }
     }
 System.out.println ("\nFin de la liste");
+}
+
+public static void AfficheNPJ(int n3) {
+   
+    System.out.println ("Liste des nombres de l'intervalle de [3, n]:");
+    int ad, d=2 ;
+        
+    for (int i=3 ; i<=n3 ; i++) {       
+       if (Premier (i)){
+        ad = d ;
+        d=i;
+        if (d==ad+2)     
+            System.out.printf ("Premiers jumeaux : %d %d\n", ad ,d );
+    }
+}    
 }
 }
