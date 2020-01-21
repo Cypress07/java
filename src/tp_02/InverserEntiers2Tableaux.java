@@ -20,7 +20,7 @@ public class InverserEntiers2Tableaux {
         // TODO code application logic here
     
         Scanner reader = new Scanner(System.in);    
-   final int n=10;
+    final int n=10;
     int [] tab1, tab2 ;
     tab1 = new int [n] ;
     tab2 = new int [n];
