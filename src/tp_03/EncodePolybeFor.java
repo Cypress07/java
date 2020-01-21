@@ -13,16 +13,16 @@ public class EncodePolybeFor {
     
    public static void main(String[] args)
     {
-        Scanner reader = new Scanner(System.in);    
-        String message = new String ();
-         
+     Scanner reader = new Scanner(System.in);    
+     String message = new String () ;   
         System.out.print("Entrez votre message : \n\t");
         message = reader.nextLine();
          
         //test de la fonction :
-        System.out.print(" "+polybe(message));
+        System.out.print(code_polybe(message));
     }
-   public static String polybe(String message) {
+
+   public static String code_polybe(String message) {
           
         String messageCrypte = "";
         final int N=5;
@@ -45,10 +45,10 @@ public class EncodePolybeFor {
             message=message.replace('ù','u');
              
             //cryptage du message :
-            for (int k = 0; k<message.length(); k++)
-                for(int i = 0; i<N; i++)
-                    for(int j = 0; j<N; j++)
-                        if((message.charAt(k))==(tab[i][j]))
+            for (int k = 0; k < message.length(); k++)
+                for(int i = 0; i<N ; i++)
+                    for(int j = 0 ; j<N ; j++)
+                        if((message.charAt(k)) == (tab[i][j]))
                         {
                             messageCrypte+=(i);
                             messageCrypte+=(j);
@@ -58,4 +58,4 @@ public class EncodePolybeFor {
             return messageCrypte;
         }
  
-    }
+}
