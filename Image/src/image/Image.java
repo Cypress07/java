@@ -21,50 +21,37 @@ public class Image {
     Scanner reader = new Scanner(System.in);    
     
     final int nl=5, nc=6; 
-    int [][]matrice = {
+    int [][] matrice = {
         {25, 23, 100, 100, 100, 100},
         {44, 45, 50, 100, 100, 100},
         {65, 65, 50, 20, 100, 100},
         {90, 62, 100, 5, 0, 0},
         {60, 87, 100, 0, 100, 100}    
 };
-        System.out.print("Entrez votre saturation :");
-        int saturation  = reader.nextInt();
+        affiche (matrice);
+         
+        //test de la fonction Mystere
+        matrice= Mystere(matrice);
+        affiche (matrice);
         
-        //test de la fonction Mystere   
-        System.out.println(" " +Mystere (saturation));
-        //test de la fonction moyenne :
-        System.out.println("La moyenne vaut : " + Moyenne(saturation));
-        //DiminutionContraste
-          System.out.print("Entrez valeur de contraste :");
-           int constraste = reader.nextInt ();
-           
-            System.out.println("La contraste vaut : " + DimConstraste(contraste));
+        matrice=AccentueContraste (matrice);
+        affiche (matrice);
     }
 
-   public static int Mystere(int matrice) {
-       int i,j; 
-       final int nl=5, nc=6 ;
-       int [][] tab = {
-        {25, 23, 100, 100, 100, 100},
-        {44, 45, 50, 100, 100, 100},
-        {65, 65, 50, 20, 100, 100},
-        {90, 62, 100, 5, 0, 0},
-        {60, 87, 100, 0, 100, 100}
-};
+   public static int[][] Mystere(int [][] matrice) {
        
-            for (i = 0; i <nl; i++){
-                for(j = 0; j<nc ; j++)
-                    matrice = 100-tab[i][j];
+            for (int i = 0; i <5; i++){
+                for(int j = 0; j<6 ; j++)
+                    matrice[i][j] = 100-matrice[i][j];
             }
             return matrice ;
         }
 
- public static int Moyenne(int m) {
+ public static int Moyenne(int moyenne) {
 
- int i, j, somme=0, moyenne;
+ int i, j, somme=0;
   final int nl=5, nc=6; 
-    int [][]matrice = {
+    int [][] matrice = {
         {25, 23, 100, 100, 100, 100},
         {44, 45, 50, 100, 100, 100},
         {65, 65, 50, 20, 100, 100},
@@ -80,20 +67,42 @@ public class Image {
     moyenne = somme / (nl*nc) ; 
  return moyenne;
     }
-  public static int DimConstraste(int c) {
+  public static int [][] DimConstraste(int [][] matrice) {
     
-                if ( c > 50 && c <= 75){
-                    c = 75 ;
-                }
-                if ( c > 75){
-                c = 100 ;
-                }
-                else {
-                    c = c/2 ;
-}
-                return c;
+    int moyenne = Moyenne (matrice);
+    
+    int correction;
+    for (int i=0; i<5; i++){
+      for (int j=0; j<6; j++){
+          correction = (matrice[i][j]-moyenne)/2;
+          matrice[i][j]=matrice [i][j]-correction;
+      }
   }
+  return matrice;
+  }
+  
+public static void affiche (int [][]matrice) {
 
+for (int i=0; i<5; i++) {
+    System.out.println();
+    for (int j=0; j<6; j++){
+        System.out.println (matrice[i][j] +"t");
+    }
+    }
+        System.out.println (); 
+}       
+ public static int[][] AccentueContraste (int [][] matrice) {
+
+for (int i=0; i<5; i++) {
+    for (int j=0; j<6; j++){     
+        if (matrice[i][j] > 75)
+            matrice [i][j]=100;
+        else if (matrice [i][j] >50)
+            matrice [i][j]=75;
+        else
+            matrice[i][j]=matrice [i][j]/2;
+    }
 }
- 
- 
+return matrice;
+ }
+}
