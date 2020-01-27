@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author formation_gep
  */
-public class PlusGrandEntier {
+public class IndexElementPlusGrand {
 
     /**
      * @param args the command line arguments
@@ -19,23 +19,24 @@ public class PlusGrandEntier {
     public static void main(String[] args) {
         // TODO code application logic here
     Scanner reader = new Scanner(System.in);    
-    final int n=3;
-    int [] tab ;
-    tab = new int [n] ;
-    int i, max;
+    final int N=10;
+    int [] tab ; 
+    tab = new int [N] ;
+    int i, indmax;
   
-    for (i=0 ; i<n ; i++) {
-    System.out.print("Entrez une température :")   ;
+    for (i=0 ; i<N ; i++) {
+    System.out.print("Entrez une valeur :")   ;
     tab [i] = reader.nextInt();
     }
-   
-    max=tab [0];
     
-    for (i=1 ; i<n ; i++)  { 
-    if (tab [i] > max) ;
-    max=tab [i];
+    indmax=0 ;
+    
+    for (i=1 ; i<N; i++) {
+     if (tab[i]>tab[indmax]) {
+            indmax=i;   
     }
-    System.out.println("La température max est : " + max);
-   
+    }
+    System.out.println("L'index de l'élément le + grand est :" +indmax) ;     
+    }
 }
-}
+

@@ -23,8 +23,7 @@ public class TableMultiplication {
     int i, n, multiplication ;
     System.out.print("Entrez un nombre entier :") ;
     n = reader.nextInt();
-    multiplication = 0;
-       
+    
        int num = n;
        for(i = 1; i <= 100; ++i)
         {

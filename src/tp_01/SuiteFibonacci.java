@@ -21,7 +21,6 @@ public class SuiteFibonacci {
     Scanner reader = new Scanner(System.in);    
     //VARIABLES 
     int ad, d, n , somme,i ;
-    long produit ;
     
     System.out.print("Entrez un nombre entier :") ;
     n = reader.nextInt();
