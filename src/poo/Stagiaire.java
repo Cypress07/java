@@ -48,5 +48,9 @@ public boolean equals(Object obj) {
     }
 }
 
+@Override
+public String toString(){
+    return String.format ("Stagiaire %s %s", getNom(), getPrenom());
+}
 }
  
